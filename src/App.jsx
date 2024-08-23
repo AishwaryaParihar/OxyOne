@@ -1,11 +1,8 @@
 import './App.css'
 import { Outlet } from 'react-router-dom'
 import './index.css'
-<<<<<<< HEAD
 import Navbar from './component/navbar/Navbar'
-=======
 import Footer from './component/footer/Footer'
->>>>>>> 4f08d53a2cefda07f617e8e86a5b349068640bf9
 
 function App() {
 
