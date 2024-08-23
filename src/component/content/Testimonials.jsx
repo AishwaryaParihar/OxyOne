@@ -24,7 +24,6 @@ const Testimonials = () => {
         {testimonials.map((testimonial, index) => (
           <SwiperSlide key={index}>
             <div className="p-6 h-[310px] bg-white border border-gray-300 rounded-lg text-center relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-20 rounded-lg -z-10"></div>
               <img
                 src={testimonial.image}
                 alt={testimonial.name}
