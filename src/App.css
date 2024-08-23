@@ -1,0 +1,26 @@
+.text-primary{
+    color: #04471c; 
+}
+.bg-primary{
+    background-color: #04471c;
+}
+.border-primary{
+    border: 2px solid #04471c;
+}
+
+.text-secondary{
+    color: #F7B32B;
+}
+.bg-second{
+    background-color: #F7B32B;
+}
+.bg-second-hover{
+    background-color: #e99f0b;
+}
+.border-second{
+    border: 2px solid #F7B32B;
+}
+
+.text-second{
+    color: #F7B32B;
+}
