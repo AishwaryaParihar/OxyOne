@@ -15,8 +15,8 @@ const LeaderBoard = () => {
   ];
 
   return (
-    <div className="w-full max-w-4xl mx-auto mt-3 mb-24 p-4">
-      <h2 className="text-3xl font-semibold text-center mb-4">
+    <div className="w-full max-w-4xl mx-auto mt-3  p-4">
+      <h2 className="text-2xl font-bold text-center mb-4">
         Lea<span className="text-green-700">der bo</span>ard
       </h2>
       <div className="grid grid-cols-1  gap-4">

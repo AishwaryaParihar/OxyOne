@@ -1,34 +1,36 @@
-import React, { useState } from 'react'
-import logo from '../../assets/oxyVan-logo.png'
+import React, { useState } from "react";
+import logo from "../../assets/oxyVan-logo.png";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen)
-  }
+    setIsOpen(!isOpen);
+  };
 
   return (
-    <nav className="bg-white shadow-md sticky  z-20 top-0 start-0 border-b border-gray-200">
+    <nav className="bg-white shadow-md sticky z-20 top-0 start-0 border-b border-gray-200">
       <div className="lg:w-6/12 xl:w-[470px] sm:w-8/12 w-full mx-auto flex items-center justify-between ">
         {/* Logo */}
         <a href="/" className="flex items-center">
           <img src={logo} className="h-20" alt="Logo" />
-          {/* <span className="ml-3 text-2xl font-semibold">Flowbite</span> */}
         </a>
-        
+
         {/* Button */}
-        <button type="button" className=" md:block text-white bg-second hover:bg-second-hover focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-9 mr-11 py-2 dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800">
-         Donet
-        </button>
-        
-        {/* Hamburger Icon */}
-        <button 
-          onClick={toggleMenu}
-          className="flex items-center  mr-9 text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200"
-          aria-controls="navbar-sticky"
-          aria-expanded={isOpen}
+        <button
+          type="button"
+          className="md:block text-white bg-second hover:bg-second-hover focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-9 mr-11 py-2 dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
         >
+          Donet
+        </button>
+
+        {/* Hamburger Icon */}
+        <button
+  onClick={toggleMenu}
+  className="flex items-center mr-9 text-gray-500 rounded-lg focus:outline-none  active:ring-0"
+  aria-controls="navbar-sticky"
+  aria-expanded={isOpen}
+>
           <svg
             className="w-6 h-6"
             fill="none"
@@ -45,41 +47,50 @@ const Navbar = () => {
           </svg>
         </button>
       </div>
-      
-      {/* Dropdown Menu */}
-      {isOpen && (
-        <div className=" bg-white shadow-lg">
-          <ul className="space-y-2 p-4">
-            <li>
-              <a href="#" className="block text-gray-900 hover:bg-gray-100 rounded py-2 px-4">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#" className="block text-gray-900 hover:bg-gray-100 rounded py-2 px-4">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#" className="block text-gray-900 hover:bg-gray-100 rounded py-2 px-4">
-                Services
-              </a>
-            </li>
-            <li>
-              <a href="#" className="block text-gray-900 hover:bg-gray-100 rounded py-2 px-4">
-                Contact
-              </a>
-            </li>
-            {/* <li>
-              <button className="block w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                Get started
-              </button>
-            </li> */}
-          </ul>
-        </div>
-      )}
-    </nav>
-  )
-}
 
-export default Navbar
+      {/* Dropdown Menu with transition */}
+      <div
+        className={`transition-all duration-700 ease-linear transform ${
+          isOpen ? "opacity-100 max-h-screen" : "opacity-0 max-h-0 overflow-hidden"
+        } bg-white shadow-lg`}
+      >
+        <ul className="space-y-2 p-4">
+          <li>
+            <a
+              href="#"
+              className="block text-gray-900 hover:bg-gray-100 rounded py-2 px-4"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              className="block text-gray-900 hover:bg-gray-100 rounded py-2 px-4"
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              className="block text-gray-900 hover:bg-gray-100 rounded py-2 px-4"
+            >
+              Services
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              className="block text-gray-900 hover:bg-gray-100 rounded py-2 px-4"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
