@@ -1,107 +1,45 @@
-import React, { useState } from "react";
-import Slider from "react-slick";
-// import { data } from "../data/testimony";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-// import Headings from "../utiliti/heading/Heading";
-import { data } from "../../data/Testimonial";
-// import "./Testimony.css"; 
-// import quoteImg from "../../assets/gif/quotation-mark.png";
-// import quoteImgRed from "../../assets/gif/quotation-mark-red.png"; 
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import testimonials from "../../data/testimonial";
+import './swiper-custom.css'; // Ensure this file is correctly imported
 
-const Testimony = () => {
-  const [activeSlide, setActiveSlide] = useState(0);
-  const slidesToShow = 3;
-
-  const settings = { 
-    dots: true,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: slidesToShow,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    cssEase: "ease",
-    beforeChange: (current, next) => setActiveSlide(next),
-    appendDots: (dots) => (
-      <div style={{ padding: "10px", bottom: "-25px" }}>
-        <ul style={{ margin: "0px" }}> {dots} </ul>
-      </div>
-    ),
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 1024, // medium screens
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 640, // small screens
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
-  const isMiddleSlide = (index) => {
-    const middleSlideIndex = (activeSlide + Math.floor(slidesToShow / 2)) % data.length;
-    const adjustedIndex = (index + data.length) % data.length;
-    return adjustedIndex === middleSlideIndex;
-  };
-
-
+const Testimonials = () => {
   return (
-    <div className="m-5 md:m-20">
-      {/* <Headings heading={"h6"} style={"text-shadow"}>
-        Testimonials
-      </Headings>
-      <Headings heading={"h2"} style={"text-shadow"}>
-        What <span className="text-primary">They</span> Say
-      </Headings> */}
-      <Slider {...settings} className="testimony-slider">
-        {data.map((item, index) => (
-          <div
-            className={`px-3 md:px-4 mb-10 ${
-              isMiddleSlide(index) ? "scale-105" : "scale-100"
-            } transition-transform duration-300`}
-            key={index}
-          >
-           <div
-              className={`h-[325px] mt-10 md:mt-20 ${
-                isMiddleSlide(index) ? "bg-primary text-white" : "bg-gray-100"
-              } p-5 md:p-7 gap-5 lg:gap-10 mt-10 transition-all duration-300 relative`}
-            >
-              <div className="flex flex-col items-center  text-justify">
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  className="w-20 h-20 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full object-cover mb-2"
-                />
-                <div className="font-bold text-xl md:text-lg lg:text-xl mb-1">
-                  {item.name}
-                </div>
-                <div className="mb-4 text-sm md:text-xs lg:text-sm">
-                  {item.rank}
-                </div>
-                {/* <img
-                    src={isMiddleSlide(index) ? quoteImg : quoteImgRed}
-                    alt="Quotation Mark"
-                    className="w-8 h-8 mb-2"
-                  /> */}
-                <div className="mt-1 text-base md:text-sm lg:text-base truncated-text">
-                  {item.desc}
-                </div>
-              </div>
+    <div className="w-full max-w-6xl mx-auto mt-12 mb-12 px-4">
+      <h2 className="text-3xl font-bold text-center mb-8">What Our Clients Say</h2>
+      <Swiper
+        spaceBetween={30}
+        slidesPerView={2}
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 3000 }}
+        loop={true}
+        modules={[Navigation, Pagination, Autoplay]}
+        className="rounded-lg overflow-hidden"
+      >
+        {testimonials.map((testimonial, index) => (
+          <SwiperSlide key={index}>
+            <div className="p-6 h-[310px] bg-white border border-gray-300 rounded-lg text-center relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-20 rounded-lg -z-10"></div>
+              <img
+                src={testimonial.image}
+                alt={testimonial.name}
+                className="w-24 h-24 mx-auto rounded-full border-4 border-white mb-4 object-cover"
+              />
+              <p className="text-lg font-semibold mb-2 text-gray-800">
+                "{testimonial.quote}"
+              </p>
+              <p className="text-sm text-gray-600">- {testimonial.name}</p>
             </div>
-          </div>
+          </SwiperSlide>
         ))}
-      </Slider>
+      </Swiper>
     </div>
   );
 };
 
-export default Testimony;
+export default Testimonials;
