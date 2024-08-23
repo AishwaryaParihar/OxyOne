@@ -1,8 +1,7 @@
-/* Custom Swiper Pagination Styles */
-.swiper-pagination {
-    bottom: 50px; 
+.swiper-pagination{
+    position: absolute;
+    bottom:-100px;
 }
-
 .swiper-pagination-bullet {
     background: rgba(0, 0, 0, 0.5); /* Bullet color */
     width: 12px; /* Bullet size */
@@ -12,6 +11,6 @@
 }
 
 .swiper-pagination-bullet-active {
-    background:#28a745; /* Active bullet color */
+    background: #28a745; /* Green color for active bullet */
     width: 16px; /* Larger bullet for active state */
 }

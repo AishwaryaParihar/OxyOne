@@ -23,12 +23,11 @@ const Testimonials = () => {
       >
         {testimonials.map((testimonial, index) => (
           <SwiperSlide key={index}>
-            <div className="p-6 h-[310px] bg-white border border-gray-300 rounded-lg text-center relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-20 rounded-lg -z-10"></div>
+            <div className="p-6 h-[310px] mx-2 my-3 bg-white shadow-xl rounded-lg text-center relative">
               <img
                 src={testimonial.image}
                 alt={testimonial.name}
-                className="w-24 h-24 mx-auto rounded-full border-4 border-white mb-4 object-cover"
+                className="w-24 h-24 mx-auto rounded-full  border-white mb-4 object-cover"
               />
               <p className="text-lg font-semibold mb-2 text-gray-800">
                 "{testimonial.quote}"
