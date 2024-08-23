@@ -11,7 +11,7 @@ import './swiper-custom.css'; // Ensure this file is correctly imported
 const Testimonials = () => {
   return (
     <div className="w-full max-w-6xl mx-auto mt-12 mb-12 px-4">
-      <h2 className="text-3xl font-bold text-center mb-8">What Our Clients Say</h2>
+      <h3 className="text-2xl font-bold text-center mb-8">What Our <span className="text-primary">Clients</span>  Say</h3>
       <Swiper
         spaceBetween={30}
         slidesPerView={2}
