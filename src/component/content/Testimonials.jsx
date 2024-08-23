@@ -11,7 +11,7 @@ import './swiper-custom.css'; // Ensure this file is correctly imported
 const Testimonials = () => {
   return (
     <div className="w-full max-w-6xl mx-auto mt-12 mb-12 px-4">
-      <h2 className="text-3xl font-bold text-center mb-8">What Our Clients Say</h2>
+      <h3 className="text-2xl font-bold text-center mb-8">What Our <span className="text-primary">Clients</span>  Say</h3>
       <Swiper
         spaceBetween={30}
         slidesPerView={1}
@@ -27,7 +27,7 @@ const Testimonials = () => {
               <img
                 src={testimonial.image}
                 alt={testimonial.name}
-                className="w-24 h-24 mx-auto rounded-full  border-white mb-4 object-cover"
+                className="w-20 h-20 mx-auto rounded-full border-x-4 border-lime-800 mb-4 object-cover"
               />
               <p className="text-lg font-semibold mb-2 text-gray-800">
                 "{testimonial.quote}"
