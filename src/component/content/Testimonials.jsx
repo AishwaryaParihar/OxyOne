@@ -14,7 +14,7 @@ const Testimonials = () => {
       <h2 className="text-3xl font-bold text-center mb-8">What Our Clients Say</h2>
       <Swiper
         spaceBetween={30}
-        slidesPerView={2}
+        slidesPerView={1}
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000 }}
         loop={true}
@@ -23,7 +23,7 @@ const Testimonials = () => {
       >
         {testimonials.map((testimonial, index) => (
           <SwiperSlide key={index}>
-            <div className="p-6 h-[310px] mx-2 my-3 bg-white shadow-xl rounded-lg text-center relative">
+            <div className="p-6  mx-2 my-3 bg-white shadow-xl rounded-lg text-center relative">
               <img
                 src={testimonial.image}
                 alt={testimonial.name}
