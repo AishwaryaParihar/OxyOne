@@ -10,22 +10,22 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow-md sticky  z-20 top-0 start-0 border-b border-gray-200">
-      <div className="lg:w-6/12 xl:w-[470px] sm:w-8/12 w-full mx-auto flex items-center justify-between p-4">
+      <div className="lg:w-6/12 xl:w-[470px] sm:w-8/12 w-full mx-auto flex items-center justify-between ">
         {/* Logo */}
         <a href="/" className="flex items-center">
-          <img src={logo} className="h-10" alt="Logo" />
+          <img src={logo} className="h-20" alt="Logo" />
           {/* <span className="ml-3 text-2xl font-semibold">Flowbite</span> */}
         </a>
         
         {/* Button */}
-        <button type="button" className=" md:block text-white bg-second hover:bg-second-hover focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-7 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        <button type="button" className=" md:block text-white bg-second hover:bg-second-hover focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-9 mr-11 py-2 dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800">
          Donet
         </button>
         
         {/* Hamburger Icon */}
         <button 
           onClick={toggleMenu}
-          className="flex items-center p-2 text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200"
+          className="flex items-center  mr-9 text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200"
           aria-controls="navbar-sticky"
           aria-expanded={isOpen}
         >
