@@ -27,7 +27,7 @@ const Testimonials = () => {
               <img
                 src={testimonial.image}
                 alt={testimonial.name}
-                className="w-24 h-24 mx-auto rounded-full  border-white mb-4 object-cover"
+                className="w-24 h-24 mx-auto rounded-full border-x-4 border-lime-800 mb-4 object-cover"
               />
               <p className="text-lg font-semibold mb-2 text-gray-800">
                 "{testimonial.quote}"
