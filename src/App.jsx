@@ -1,6 +1,7 @@
 import './App.css'
 import { Outlet } from 'react-router-dom'
 import './index.css'
+import Footer from './component/footer/Footer'
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
         <h1  className='text-red-300'>aaaaaaaaaaaa</h1>
           <Outlet/>
         </div>
-        {/* <Footerbar /> */}
+       <Footer/>
       </div>
     </div>
     </>

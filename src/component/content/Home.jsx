@@ -1,8 +1,11 @@
 import React from 'react'
+import LeaderBoard from './LeaderBoard'
 
 const Home = () => {
   return (
-    <div className='text-red-500'>Homhvbjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjje</div>
+    <div >
+      <LeaderBoard/>
+    </div>
   )
 }
 
