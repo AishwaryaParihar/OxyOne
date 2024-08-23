@@ -10,12 +10,9 @@ const Home = () => {
       <Hero/>
       <LeaderBoard/>
       <PlantType/>
-<<<<<<< HEAD
-      </div>
-=======
+      
       <Testimonials/>
     </div>
->>>>>>> 252bd27912db526584f3118e77e85642a8d97b95
   )
 }
 export default Home
