@@ -10,11 +10,11 @@ import './swiper-custom.css'; // Ensure this file is correctly imported
 
 const Testimonials = () => {
   return (
-    <div className="w-full max-w-6xl mx-auto mt-12 mb-12 px-4">
+    <div className="w-full  mx-auto mt-12 mb-12 px-4">
       <h3 className="text-2xl font-bold text-center mb-8">What Our <span className="text-primary">Clients</span>  Say</h3>
       <Swiper
         spaceBetween={30}
-        slidesPerView={1}
+        slidesPerView={3}
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000 }}
         loop={true}
@@ -23,7 +23,7 @@ const Testimonials = () => {
       >
         {testimonials.map((testimonial, index) => (
           <SwiperSlide key={index}>
-            <div className="p-6  mx-2 my-3 bg-white shadow-xl rounded-lg text-center relative">
+            <div className="p-6  mx-2 my-3 bg-white shadow-xl rounded-lg text-center relative h-64">
               <img
                 src={testimonial.image}
                 alt={testimonial.name}

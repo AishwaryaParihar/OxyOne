@@ -20,7 +20,7 @@ const images = [
 
 const Hero = () => {
   return (
-    <div className="w-full max-w-6xl mx-auto mt-3 mb-6">
+    <div className="w-full  mx-auto mt-10 mb-6">
       <Swiper
         spaceBetween={30}
         slidesPerView={1}
@@ -36,7 +36,7 @@ const Hero = () => {
             <img
               src={src}
               alt={`Carousel Slide ${index + 1}`}
-              className="w-full h-56 object-cover"
+              className="w-full h-1/6 object-cover"
             />
           </SwiperSlide>
         ))}

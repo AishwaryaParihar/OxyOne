@@ -26,4 +26,29 @@
 }
 
 
-
+/* text-animation  */
+/* .custom-page {
+    @apply grid;
+  }
+  
+  .custom-txt {
+    @apply m-auto flex font-bold text-transparent uppercase ;
+    font-family: monospace;
+  }
+  
+  .custom-character {
+    animation: custom-fall 2s linear infinite;
+    animation-delay: calc(var(--i) * 200ms);
+    transform: translateY(-100%);
+  }
+  
+  @keyframes custom-fall {
+    50%, 80% {
+      color: green;
+      transform: translateY(0);
+      opacity: 1;
+    }
+    95%, 100% {
+      opacity: 0;
+    }
+  } */
