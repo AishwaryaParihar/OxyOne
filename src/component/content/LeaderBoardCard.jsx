@@ -2,8 +2,8 @@ import avtar from "../../assets/avatar1.png";
 
 const LeaderBoardCard = ({ title, winnerName, items }) => {
   return (
-    <div className="border-green-700  border rounded-3xl  border-dashed shadow-lg p-4 bg-white ">
-      <div className="p-3 border rounded-3xl border-green-700 shadow-sm">
+    <div className="border-green-700  border rounded-3xl  border-dashed shadow-lg p-4 bg-primary ">
+      <div className="p-3 border rounded-3xl border-green-700 shadow-sm bg-white">
         <div className="text-center">
           <h3 className="text-xl font-semibold mb-3">{title}</h3>
           <img src={avtar} alt="winner" className="w-16 mb-3 mx-auto rounded-full" />
