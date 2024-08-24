@@ -15,32 +15,50 @@ import carousel3 from "../../assets/img7.jpg";
 import carousel4 from "../../assets/img3.jpg"; 
 
 const images = [
-  carousel,
-  carousel2,
-  carousel3,
-  carousel4,
+  {
+    src: carousel,
+    text: "Without care, even the greenest fields can fade into lifeless sands.",
+  },
+  {
+    src: carousel2,
+    text: "When the last tree falls, the land turns into a wasteland.",
+  },
+  {
+    src: carousel3,
+    text: "With each seed, we renew our promise to the planet.",
+  },
+  {
+    src: carousel4,
+    text: "Together, we can bring life back to the land and create a legacy of green.",
+  },
 ];
 
 const Hero = () => {
   return (
-    <div className="w-full  mx-auto mt-10 mb-6 py-10">
+    <div className="w-full mx-auto mt-10 mb-6 py-10">
       <Swiper
         spaceBetween={30}
         slidesPerView={1}
-        // navigation
         pagination={{ clickable: true }}
-        autoplay={{ delay: 3000 }}
+        autoplay={{ delay: 4500 }}
         loop={true}
         modules={[Navigation, Pagination, Autoplay]}
         className="rounded-lg overflow-hidden"
       >
-        {images.map((src, index) => (
-          <SwiperSlide key={index}>
+        {images.map((item, index) => (
+          <SwiperSlide key={index} className="relative">
             <img
-              src={src}
+              src={item.src}
               alt={`Carousel Slide ${index + 1}`}
               className="w-full h-[80vh] object-cover"
             />
+            <div className="absolute inset-0 bg-black bg-opacity-30 flex justify-center">
+              <div className="typewriter">
+                <h2 className="text-white text-4xl font-bold mt-[25px]">
+                  {item.text}
+                </h2>
+              </div>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
