@@ -10,9 +10,9 @@ const Home = () => {
       <Hero/>
       <LeaderBoard/>
       <PlantType/>
+      
       <Testimonials/>
     </div>
   )
 }
-
 export default Home
