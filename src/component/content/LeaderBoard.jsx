@@ -20,7 +20,7 @@ const LeaderBoard = () => {
   ];
 
   return (
-    <div className="w-full mx-auto mt-3 p-4 md:px-16">
+    <div className="w-full mx-auto mt-3 p-4 md:px-6 lg:px-16">
       <h2 className="sm:text-4xl text-2xl font-bold text-center mb-4">
         Lea<span className="text-green-700">der bo</span>ard
       </h2>
@@ -34,8 +34,8 @@ const LeaderBoard = () => {
           items={donors}
           className="relative top-4"
         />
-        <div className="relative mt-14">
-          <img src={banyanTree} alt="Banyan Tree" className="h-full w-auto rounded-2xl" />
+        <div className="relative  md:top-12">
+          <img src={banyanTree} alt="Banyan Tree" className="h-full w-full rounded-2xl" />
         </div>
         <LeaderBoardCard
           title="Top Volunteers"
