@@ -4,13 +4,14 @@ import Hero from './Hero'
 import PlantType from './PlantType'
 
 import Testimonials from './Testimonials'
+import OurImpact from './OurImpact'
 const Home = () => {
   return (
     <div >
       <Hero/>
       <LeaderBoard/>
       {/* <PlantType/> */}
-      
+      <OurImpact/>
       <Testimonials/>
     </div>
   )
