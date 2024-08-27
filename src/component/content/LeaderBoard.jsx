@@ -20,7 +20,7 @@ const LeaderBoard = () => {
   ];
 
   return (
-    <div className="w-full mx-auto mt-3 p-4 md:px-6 lg:px-16">
+    <div className="w-full mx-auto mt-3 p-4  px-8">
       <h2 className="sm:text-4xl text-2xl font-bold text-center mb-4">
         Lea<span className="text-green-700">der bo</span>ard
       </h2>

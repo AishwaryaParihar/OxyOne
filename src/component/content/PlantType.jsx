@@ -5,8 +5,8 @@ import earth from "../../assets/earth.png"
 const PlantType = () => {
 
     return (
-        <div className='w-full'>
-            <div className="mt-10 lg:mt-20 p-4 px-2 md:px-6 lg:px-16">
+        <div className='w-full px-8'>
+            <div className="mt-10 lg:mt-20 p-4 ">
                 <h3 className='text-2xl md:text-4xl font-bold text-center'>Nature's <span className="text-primary">Oxygen Hero</span>es</h3>
                 <p className="text-md text text-center font-medium  mt-2 py-2">Discover the magnificent plants that contribute the most to our environment by producing abundant oxygen, essential for life on Earth.</p>
 
@@ -20,7 +20,7 @@ const PlantType = () => {
                                 <img src={tree1} alt="Banyan Tree" className='w-24 h-24 rounded-full object-cover' />
                             </span>
                             <span className='ps-3 '>
-                                <div className="text-lg text-primary font-semibold">Banyan Tree</div>
+                                <div className="text-lg text-primary font-bold">Banyan Tree</div>
                                 <div className='text-sm'>Known for its massive size and extensive canopy, the Banyan tree is a powerful oxygen producer, contributing significantly to the environment.</div>
                             </span>
                         </div>
@@ -30,7 +30,7 @@ const PlantType = () => {
                                 <img src={tree1} alt="Banyan Tree" className='w-24 h-24 rounded-full object-cover' />
                             </span>
                             <span className='ps-3 '>
-                                <div className="text-lg text-primary font-semibold">Peepal Tree</div>
+                                <div className="text-lg text-primary font-bold">Peepal Tree</div>
                                 <div className='text-sm'>
                                 Known for its massive size and extensive canopy, the Banyan tree is a powerful oxygen producer, contributing significantly to the environment.
                                 </div>
@@ -42,7 +42,7 @@ const PlantType = () => {
                                 <img src={tree1} alt="Banyan Tree" className='w-24 h-24 rounded-full object-cover' />
                             </span>
                             <span className='ps-3 '>
-                                <div className="text-lg text-primary font-semibold">Neem Tree</div>
+                                <div className="text-lg text-primary font-bold">Neem Tree</div>
                                 <div className='text-sm'>Neem is a fast-growing tree that releases a large amount of oxygen, improving air quality.  It has significant medicinal properties, making it valuable for traditional medicine.</div>
                             </span>
                         </div>
@@ -52,7 +52,7 @@ const PlantType = () => {
                                 <img src={tree1} alt="Banyan Tree" className='w-24 h-24 rounded-full object-cover' />
                             </span>
                             <span className='ps-3 '>
-                                <div className="text-lg text-primary font-semibold">Arjuna Tree </div>
+                                <div className="text-lg text-primary font-bold">Arjuna Tree </div>
                                 <div className='text-sm'>Arjuna is known for its high oxygen release, contributing to better air quality. Traditionally used in Ayurvedic medicine, the Arjuna tree is valued for its therapeutic properties, especially for heart health.</div>
                             </span>
                         </div>
@@ -62,7 +62,7 @@ const PlantType = () => {
                                 <img src={tree1} alt="Banyan Tree" className='w-24 h-24 rounded-full object-cover' />
                             </span>
                             <span className='ps-3 '>
-                                <div className="text-lg text-primary font-semibold">Sandalwood Tree </div>
+                                <div className="text-lg text-primary font-bold">Sandalwood Tree </div>
                                 <div className='text-sm'>Sandalwood trees are known for their oxygen-releasing properties, especially in their mature stages. The wood is highly valued for its fragrance and is used in a variety of products, from perfumes to religious rituals.</div>
                             </span>
                         </div>
