@@ -1,6 +1,6 @@
 import React from 'react'
 import LeaderBoard from './LeaderBoard'
-import Hero from './Hero'
+// import Hero from './Hero'
 import PlantType from './PlantType'
 
 import Testimonials from './Testimonials'
@@ -9,7 +9,7 @@ import Mission from './Mission'
 const Home = () => {
   return (
     <div >
-      <Hero/>
+      {/* <Hero/> */}
       <LeaderBoard/>
       <PlantType/>
       <Mission/>
