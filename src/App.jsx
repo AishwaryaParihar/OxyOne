@@ -4,7 +4,7 @@ import './index.css'
 import Navbar from './component/navbar/Navbar'
 import Footer from './component/footer/Footer'
 import FooterItems from './component/footer/FooterItems'
-
+import Hero from './component/content/Hero'
 function App() {
 
 
@@ -15,6 +15,7 @@ function App() {
           {/* {children} */}
           {/* <Outlet/> */}
           <Navbar/>
+          <Hero/>
           <Outlet/>
          <FooterItems/>
        <Footer/>
