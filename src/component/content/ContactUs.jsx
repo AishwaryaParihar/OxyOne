@@ -3,7 +3,7 @@ import styles from "./ContactUs.module.css";
 
 const ContactUs = () => {
   return (
-    <div className="flex flex-col lg:flex-row justify-center items-start lg:items-center lg:space-x-10 py-12 px-4 lg:px-16 bg-green-50">
+    <div className="flex flex-col lg:flex-row justify-center items-start lg:items-center lg:space-x-10 py-12 px-4 lg:px-16 contactbg">
       {/* Form Column */}
       <div className="lg:w-1/2 w-full mb-8 lg:mb-0">
         <h2 className="text-3xl font-bold text-green-700 mb-6">Contact Us</h2>

@@ -34,6 +34,7 @@ body{
 .text-second{
     color: #F7B32B;
 }
+<<<<<<< HEAD
 
 .heading01{
    font-weight: 600;
@@ -42,6 +43,20 @@ body{
    margin-bottom: 10px;
    font-size: 2.25rem ;
    line-height: 2.5rem ;
+=======
+.contactbg{
+  background-color: #DBEFED;
+}
+/* .heroImg {
+  width: 100%;
+  height: 70vh;
+  background: url(./assets/hero.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  transform: rotate(180deg); 
+} */
+>>>>>>> 3e101c8ab6225f8a03b74cb94463154fae0e689d
 
 }
 .subheading{

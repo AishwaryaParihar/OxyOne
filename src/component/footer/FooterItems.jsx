@@ -10,8 +10,8 @@ const FooterItems = () => {
           <div className="mb-6 md:mb-0">
             <a href="/" className="flex items-center">
               <img src={logo} className="h-24 md:h-44" alt="OxyVan Logo" />
-              <span className="ml-3 text-2xl font-semibold text-gray-900 dark:text-white">
-              Oxy<span className="text-primary">Van</span></span>
+              {/* <span className="ml-3 text-2xl font-semibold text-gray-900 dark:text-white">
+              Oxy<span className="text-primary">Van</span></span> */}
             </a>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
