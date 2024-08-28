@@ -17,25 +17,25 @@ const AboutVision = () => {
   ];
 
   return (
-    <div className="px-4 md:px-16 py-8">
+    <div className="px-4 md:px-8 py-8">
       {sections.map((section, index) => (
-        <div className="w-full flex flex-col md:flex-row mb-8" key={index}>
+        <div className="w-full flex flex-col md:flex-row " key={index}>
           {index === 0 ? (
             <>
-              <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center md:text-left px-4 md:px-8">
+              <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center md:text-left ">
                 <h2 className="text-3xl md:text-4xl font-bold underline mb-4">{section.title}</h2>
                 <p className="text-base md:text-lg">{section.text}</p>
               </div>
               <div className="w-full md:w-1/2 flex justify-center items-center">
-                <img src={section.imgSrc} alt={section.title} className="w-full md:w-96 h-auto object-cover" />
+                <img src={section.imgSrc} alt={section.title} className="w-full md:w-[480px] lg:w-[600px] h-auto object-cover" />
               </div>
             </>
           ) : (
             <>
               <div className="w-full md:w-1/2 flex justify-center items-center">
-                <img src={section.imgSrc} alt={section.title} className="w-full md:w-96 h-auto object-cover" />
+                <img src={section.imgSrc} alt={section.title} className="w-full md:w-[400px] lg:w-[500px] h-auto object-cover" />
               </div>
-              <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center md:text-left px-4 md:px-8">
+              <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center md:text-left ">
                 <h2 className="text-3xl md:text-4xl font-bold underline mb-4">{section.title}</h2>
                 <p className="text-base md:text-lg">{section.text}</p>
               </div>
