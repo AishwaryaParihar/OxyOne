@@ -1,20 +1,24 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/autoplay';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import testimonials from "../../data/testimonial";
-import './swiper-custom.css'; // Ensure this file is correctly imported
+import "./swiper-custom.css"; // Ensure this file is correctly imported
 import { BiSolidQuoteRight } from "react-icons/bi";
+import headlogo1 from "../../assets/flower-pot.png";
 
 const Testimonials = () => {
   return (
+    <>
+      <div className="flex justify-center">
+        <div className="heading01"> What Our Clients Say</div>
+
+        <img src={headlogo1} className="h-14 inline" alt="" />
+      </div>
     <div className="w-full mx-auto mt-12 mb-12 px-4">
-      <h3 className="text-2xl font-bold text-center mb-8">
-        What Our <span className="text-primary">Clients</span> Say
-      </h3>
       <Swiper
         spaceBetween={30}
         speed={1000}
@@ -43,7 +47,7 @@ const Testimonials = () => {
                 alt={testimonial.name}
                 className="w-20 h-20 mx-auto rounded-full border-x-4 border-lime-800 mb-4 object-cover"
               />
-                            <BiSolidQuoteRight className="mx-auto text-primary"/>
+              <BiSolidQuoteRight className="mx-auto text-primary" />
 
               <p className="text-lg font-semibold mb-2 text-gray-800">
                 "{testimonial.quote}"
@@ -54,6 +58,7 @@ const Testimonials = () => {
         ))}
       </Swiper>
     </div>
+    </>
   );
 };
 
