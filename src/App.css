@@ -34,7 +34,6 @@ body{
 .text-second{
     color: #F7B32B;
 }
-<<<<<<< HEAD
 
 .heading01{
    font-weight: 600;
@@ -43,7 +42,6 @@ body{
    margin-bottom: 10px;
    font-size: 2.25rem ;
    line-height: 2.5rem ;
-=======
 .contactbg{
   background-color: #DBEFED;
 }
@@ -56,7 +54,6 @@ body{
   background-size: cover; 
   transform: rotate(180deg); 
 } */
->>>>>>> 3e101c8ab6225f8a03b74cb94463154fae0e689d
 
 }
 .subheading{
