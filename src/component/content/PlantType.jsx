@@ -8,7 +8,7 @@ const PlantType = () => {
     <div className="w-full px-8">
       <div className="mt-10 lg:mt-20 p-4 ">
         <div className="flex justify-center">
-          <div className="heading01">Nature's Oxygen Heroes</div>
+          <div className="heading01 ">Nature's Oxygen Heroes</div>
 
           <img src={headlogo1} className="h-14 inline" alt="" />
         </div>

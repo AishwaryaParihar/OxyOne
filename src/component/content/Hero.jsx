@@ -50,15 +50,15 @@ const Hero = () => {
             <img
               src={item.src}
               alt={`Carousel Slide ${index + 1}`}
-              className="w-full h-[80vh] object-cover"
+              className="w-full h-[40vh] sm:h-[60vh] lg:h-[80vh] object-cover"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-30 flex justify-center">
+            {/* <div className="absolute inset-0 bg-black bg-opacity-30 flex justify-center">
               <div className="typewriter">
                 <h2 className="text-white text-4xl font-bold mt-[25px]">
                   {item.text}
                 </h2>
               </div>
-            </div>
+            </div> */}
           </SwiperSlide>
         ))}
       </Swiper>
