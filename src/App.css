@@ -1,3 +1,13 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=New+Amsterdam&display=swap');
+
+body{
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 .text-primary{
     color: #04471c; 
 }
@@ -25,30 +35,21 @@
     color: #F7B32B;
 }
 
+.heading01{
+   font-weight: 600;
+   border-bottom: 3px ridge rgb(79, 143, 58);
+   color: #5a3817;
+   margin-bottom: 10px;
+   font-size: 2.25rem ;
+   line-height: 2.5rem ;
 
-/* text-animation  */
-/* .custom-page {
-    @apply grid;
-  }
-  
-  .custom-txt {
-    @apply m-auto flex font-bold text-transparent uppercase ;
-    font-family: monospace;
-  }
-  
-  .custom-character {
-    animation: custom-fall 2s linear infinite;
-    animation-delay: calc(var(--i) * 200ms);
-    transform: translateY(-100%);
-  }
-  
-  @keyframes custom-fall {
-    50%, 80% {
-      color: green;
-      transform: translateY(0);
-      opacity: 1;
-    }
-    95%, 100% {
-      opacity: 0;
-    }
-  } */
+}
+.subheading{
+  margin-bottom: 48px;
+  font-size: 1rem;
+  line-height: 1.75rem ;
+  font-weight: 450;
+  text-align: center;
+  /* margin-right: 47px; */
+
+}
