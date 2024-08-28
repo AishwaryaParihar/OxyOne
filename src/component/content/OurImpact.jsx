@@ -10,7 +10,7 @@ import headlogo1 from "../../assets/flower-pot.png";
 
 const OurImpact = () => {
   return (
-    <div className="container mx-auto px-4 py-8 ">
+    <div className="container mx-auto px-4 py-8 my-10">
       <div className="flex justify-center">
         <div className="heading01">OUR IMPACT</div>
 
