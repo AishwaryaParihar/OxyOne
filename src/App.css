@@ -24,7 +24,18 @@
 .text-second{
     color: #F7B32B;
 }
-
+.contactbg{
+  background-color: #DBEFED;
+}
+/* .heroImg {
+  width: 100%;
+  height: 70vh;
+  background: url(./assets/hero.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  transform: rotate(180deg); 
+} */
 
 /* text-animation  */
 /* .custom-page {
