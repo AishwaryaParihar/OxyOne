@@ -18,7 +18,7 @@ const Mission = () => {
       <div className="w-full lg:w-1/2 p-4 flex flex-col justify-center">
         {sectionContent.map(({ title, text }, index) => (
           <div key={index} className={index !== 0 ? 'mt-4' : ''}>
-            <h4 className="text-green-700 text-2xl font-bold">{title}</h4>
+            <h4 className="text-primary text-2xl font-bold">{title}</h4>
             <p>{text}</p>
             <div className="mt-5">
               <hr className="border-1 border-dashed border-green-700" />
@@ -32,7 +32,7 @@ const Mission = () => {
         <img
           src={planting}
           alt="Planting"
-          className="absolute lg:top-14 lg:left-20  w-full h-full lg:w-96 lg:h-96 object-cover rounded-3xl"
+          className="absolute lg:top-20 lg:left-20  w-full h-full lg:w-96 lg:h-96 object-cover rounded-3xl"
         />
       </div>
     </div>
