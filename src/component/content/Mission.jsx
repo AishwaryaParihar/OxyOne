@@ -15,6 +15,17 @@ const Mission = () => {
   ];
 
   return (
+<<<<<<< HEAD
+    <div className="w-full flex flex-col md:flex-row px-8 py-14">
+      <div className="w-full lg:w-1/2 p-4 flex flex-col justify-center">
+        {sectionContent.map(({ title, text }, index) => (
+          <div key={index} className={index !== 0 ? 'mt-4' : ''}>
+            <h4 className="text-primary text-2xl font-bold">{title}</h4>
+            <p>{text}</p>
+            <div className="mt-5">
+              <hr className="border-1 border-dashed border-green-700" />
+              <hr className="border-1 mt-0.5 border-dashed border-green-700" />
+=======
     <>
       <div className="flex justify-center">
         <div className="heading01">OUR MISSION</div>
@@ -31,6 +42,7 @@ const Mission = () => {
                 <hr className="border-1 border-dashed border-green-700" />
                 <hr className="border-1 mt-0.5 border-dashed border-green-700" />
               </div>
+>>>>>>> f56fa39045ea6639e61f8a3b3a545539037f32a5
             </div>
           ))}
         </div>
@@ -43,7 +55,19 @@ const Mission = () => {
           />
         </div>
       </div>
+<<<<<<< HEAD
+      <div className="w-full lg:w-1/2 p-4 flex justify-center items-center relative">
+        <div className="w-96 h-96 bg-gradient-to-r from-green-400 to-yellow-400 rounded-3xl"></div>
+        <img
+          src={planting}
+          alt="Planting"
+          className="absolute lg:top-20 lg:left-20  w-full h-full lg:w-96 lg:h-96 object-cover rounded-3xl"
+        />
+      </div>
+    </div>
+=======
     </>
+>>>>>>> f56fa39045ea6639e61f8a3b3a545539037f32a5
   );
 };
 
