@@ -21,7 +21,7 @@ const Mission = () => {
 
         <img src={headlogo1} className="h-14 inline" alt="" />
       </div>
-      <div className="w-full flex flex-col md:flex-row px-8 py-14 mx-8">
+      <div className="w-full flex flex-col md:flex-row px-8 py-14">
         <div className="w-full lg:w-1/2 p-4 flex flex-col justify-center">
           {sectionContent.map(({ title, text }, index) => (
             <div key={index} className={index !== 0 ? "mt-4" : ""}>
