@@ -9,6 +9,28 @@ import headlogo1 from "../../assets/flower-pot.png";
 // import headlogo4 from "../../assets/plant.png"
 
 const OurImpact = () => {
+  const ourImpactData = [
+    {
+      title: "Restoring Natural Habitats",
+      text: "Our tree planting efforts have helped restore critical ecosystems, providing shelter and sustenance for countless species of  wildlife.",
+      image: impact01
+    },
+    {
+      title: "Fighting Climate Change",
+      text: "Every tree planted absorbs carbon dioxide, helping to reduce the effects of global warming and create a healthier environment for future generations.",
+      image: impact02
+    },
+    {
+      title: "Improving Air Quality",
+      text: "Trees act as natural air filters, absorbing pollutants and releasing clean oxygen, making the air we breathe fresher and healthier.",
+      image: impact03
+    },
+    {
+      title: "Empowering Communities",
+      text: "Our volunteers and donors play a vital role in this mission. For every tree planted, they are contributing to a greener, more sustainable world. In return, we recognize and reward their efforts, building a strong community dedicated to positive change.",
+      image: impact04
+    },
+  ]
   return (
     <div className="container mx-auto px-4 py-8 my-10">
       <div className="flex justify-center">
