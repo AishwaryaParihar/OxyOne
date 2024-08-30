@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import LeaderBoardCard from "./LeaderBoardCard";
 import banyanTree from "../../assets/green-plant.avif";
 import headlogo1 from "../../assets/flower-pot.png";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+// Register the ScrollTrigger plugin with GSAP
+gsap.registerPlugin(ScrollTrigger);
 
 const LeaderBoard = () => {
   const donors = [
@@ -21,12 +25,84 @@ const LeaderBoard = () => {
     { name: "Volunteer 5", value: "40 hours" },
   ];
 
-  return (
-    <div className="w-full mx-auto mt-3 p-4  px-8">
-      <div className="flex justify-center">
-        <div className="heading01">Leader Board</div>
+  // Adding GSAP animations in useEffect
+  useEffect(() => {
+    // Animate the heading
+    gsap.fromTo(
+      ".heading",
+      { x: 100, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".heading",
+          start: "top 100%",
+          end: "bottom 60%",
+          scrub: true,
+        },
+      }
+    );
 
-        <img src={headlogo1} className="h-14 inline" alt="" />
+    // Animate the LeaderBoardCard components
+    gsap.fromTo(
+      ".leaderboard-card",
+      { x: 100, opacity: 0 },
+      {
+        x:0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".leaderboard-card",
+          start: "top 90%",
+          end: "bottom 70%",
+          scrub: true,
+        },
+      }
+    );
+    gsap.fromTo(
+      ".leaderboard-left",
+      { x: -100, opacity: 0 },
+      {
+        x:0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".leaderboard-left",
+          start: "top 90%",
+          end: "bottom 70%",
+          scrub: true,
+        },
+      }
+    );
+
+    // Animate the image
+    gsap.fromTo(
+      ".leaderboard-image",
+      { scale: 0.8, opacity: 0 },
+      {
+        scale: 1,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".leaderboard-image",
+          start: "top 90%",
+          end: "bottom 70%",
+          scrub: true,
+        },
+      }
+    );
+  }, []);
+
+  return (
+    <div className="w-full mx-auto mt-3 p-4 px-8">
+      <div className="flex justify-center heading">
+        <div className="heading01">Leader Board</div>
+        <img src={headlogo1} className="h-14 inline" alt="Leader Board Logo" />
       </div>
       <div className="subheading">
         "Meet the champions of our cause! Whether through dedicated service or
@@ -36,25 +112,29 @@ const LeaderBoard = () => {
         future."
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="leaderboard-left">
         <LeaderBoardCard
           title="Top Donors"
           winnerName="Chhaya Singh"
           items={donors}
-          className="relative top-4"
+          className="relative top-4 leaderboard-card"
         />
-        <div className="relative  md:top-12">
+        </div>
+        <div className="relative md:top-12 leaderboard-image">
           <img
             src={banyanTree}
             alt="Banyan Tree"
             className="h-full w-full rounded-2xl"
           />
         </div>
-        <LeaderBoardCard
+       <div className="leaderboard-card">
+       <LeaderBoardCard
           title="Top Volunteers"
           winnerName="Aishwarya Parihar"
           items={volunteers}
-          className="relative top-4"
+          className="relative top-4 "
         />
+       </div>
       </div>
     </div>
   );
