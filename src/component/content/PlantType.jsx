@@ -3,10 +3,12 @@ import tree from "../../assets/jamun.jpg";
 import tree1 from "../../assets/banyan.webp";
 import earth from "../../assets/earth.png";
 import headlogo1 from "../../assets/flower-pot.png";
+
 const PlantType = () => {
+
   return (
-    <div className="w-full px-8">
-      <div className="mt-10 lg:mt-20 p-4 ">
+    <div className="w-full px-4 md:px-8">
+      <div className="mt-10 lg:mt-20 md:p-4 ">
         <div className="flex justify-center">
           <div className="heading01 ">Nature's Oxygen Heroes</div>
 
@@ -21,7 +23,7 @@ const PlantType = () => {
           <div className="w-full lg:w-1/2 text-center p-2">
             <img src={earth} alt="Earth" className="w-full" />
           </div>
-          <div className="w-full lg:w-1/2 text-xs p-2 rounded-2xl md:mt-12">
+          <div className="w-full lg:w-1/2 text-xs md:p-2 rounded-2xl md:mt-6 text-justify">
             <div className="flex items-start ">
               <span className="flex-shrink-0 border-4 border-green-700 p-1 rounded-full">
                 <img
