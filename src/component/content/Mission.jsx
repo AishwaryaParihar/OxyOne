@@ -20,7 +20,7 @@ const Mission = () => {
           trigger: ".section-text-container",
           start: "top 80%",
           end: "bottom 60%",
-          scrub: true,
+          toggleActions: "play none none none",
         },
       }
     );
@@ -37,7 +37,7 @@ const Mission = () => {
           trigger: ".planting-image",
           start: "top 80%",
           end: "bottom 60%",
-          scrub: true,
+          toggleActions: "play none none none",
         },
       }
     );

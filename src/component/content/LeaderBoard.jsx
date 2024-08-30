@@ -58,7 +58,7 @@ const LeaderBoard = () => {
           trigger: ".heading",
           start: "top 90%",
           end: "bottom 70%",
-          scrub: true,
+          toggleActions: "play none none none",
         },
       }
     );
@@ -74,7 +74,7 @@ const LeaderBoard = () => {
           trigger: ".heading",
           start: "top 90%",
           end: "bottom 70%",
-          scrub: true,
+          toggleActions: "play none none none",
         },
       }
     );
@@ -92,7 +92,7 @@ const LeaderBoard = () => {
           trigger: ".heading",
           start: "top 90%",
           end: "bottom 70%",
-          scrub: true,
+          toggleActions: "play none none none",
         },
       }
     );

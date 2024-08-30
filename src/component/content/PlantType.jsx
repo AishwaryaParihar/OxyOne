@@ -23,7 +23,7 @@ const PlantType = () => {
           trigger: ".plant-image",
           start: "top 80%",
           end: "bottom 60%",
-          scrub: true,
+          toggleActions: "play none none none",
         },
       }
     );
@@ -41,7 +41,7 @@ const PlantType = () => {
           trigger: ".plant-text",
           start: "top 80%",
           end: "bottom 60%",
-          scrub: true,
+          toggleActions: "play none none none",
         },
       }
     );
