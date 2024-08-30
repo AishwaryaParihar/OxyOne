@@ -28,34 +28,34 @@ const LeaderBoard = () => {
   // Adding GSAP animations in useEffect
   useEffect(() => {
     // Animate the heading
+    // gsap.fromTo(
+    //   ".heading",
+    //   { x: 100, opacity: 0 },
+    //   {
+    //     x: 0,
+    //     opacity: 1,
+    //     duration: 1,
+    //     ease: "power3.out",
+    //     scrollTrigger: {
+    //       trigger: ".heading",
+    //       start: "top 100%",
+    //       end: "bottom 60%",
+    //       scrub: true,
+    //     },
+    //   }
+    // );
+
+    // Animate the LeaderBoardCard components
     gsap.fromTo(
-      ".heading",
-      { x: 100, opacity: 0 },
+      ".leaderboard-card",
+      { y: -200, opacity: 0 },
       {
-        x: 0,
+        y:0,
         opacity: 1,
         duration: 1,
         ease: "power3.out",
         scrollTrigger: {
           trigger: ".heading",
-          start: "top 100%",
-          end: "bottom 60%",
-          scrub: true,
-        },
-      }
-    );
-
-    // Animate the LeaderBoardCard components
-    gsap.fromTo(
-      ".leaderboard-card",
-      { x: 100, opacity: 0 },
-      {
-        x:0,
-        opacity: 1,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".leaderboard-card",
           start: "top 90%",
           end: "bottom 70%",
           scrub: true,
@@ -64,14 +64,14 @@ const LeaderBoard = () => {
     );
     gsap.fromTo(
       ".leaderboard-left",
-      { x: -100, opacity: 0 },
+      { y: -200, opacity: 0 },
       {
-        x:0,
+        y:0,
         opacity: 1,
         duration: 1,
         ease: "power3.out",
         scrollTrigger: {
-          trigger: ".leaderboard-left",
+          trigger: ".heading",
           start: "top 90%",
           end: "bottom 70%",
           scrub: true,
@@ -89,7 +89,7 @@ const LeaderBoard = () => {
         duration: 1,
         ease: "power3.out",
         scrollTrigger: {
-          trigger: ".leaderboard-image",
+          trigger: ".heading",
           start: "top 90%",
           end: "bottom 70%",
           scrub: true,
@@ -99,8 +99,8 @@ const LeaderBoard = () => {
   }, []);
 
   return (
-    <div className="w-full mx-auto mt-3 p-4 px-8">
-      <div className="flex justify-center heading">
+    <div className="w-full mx-auto mt-3 p-4 px-8 heading">
+      <div className="flex justify-center ">
         <div className="heading01">Leader Board</div>
         <img src={headlogo1} className="h-14 inline" alt="Leader Board Logo" />
       </div>

@@ -1,17 +1,57 @@
-import React from "react";
+import React, { useEffect } from "react";
 import tree from "../../assets/jamun.jpg";
 import tree1 from "../../assets/banyan.webp";
 import earth from "../../assets/earth.png";
 import headlogo1 from "../../assets/flower-pot.png";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const PlantType = () => {
+  useEffect(() => {
+    gsap.fromTo(
+      ".plant-image",
+      { x: -100, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        stagger: 0.3,
+        scrollTrigger: {
+          trigger: ".plant-image",
+          start: "top 80%",
+          end: "bottom 60%",
+          scrub: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".plant-text",
+      { y: 100, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        stagger: 0.3,
+        scrollTrigger: {
+          trigger: ".plant-text",
+          start: "top 80%",
+          end: "bottom 60%",
+          scrub: true,
+        },
+      }
+    );
+  }, []);
 
   return (
-    <div className="w-full px-4 md:px-8">
-      <div className="mt-10 lg:mt-20 md:p-4 ">
+    <div className="w-full px-4 md:px-8 plant">
+      <div className="mt-10 lg:mt-20 md:p-4">
         <div className="flex justify-center">
-          <div className="heading01 ">Nature's Oxygen Heroes</div>
-
+          <div className="heading01">Nature's Oxygen Heroes</div>
           <img src={headlogo1} className="h-14 inline" alt="" />
         </div>
         <div className="subheading">
@@ -20,19 +60,19 @@ const PlantType = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row py-1 mt-0 lg:mt-4">
-          <div className="w-full lg:w-1/2 text-center p-2">
-            <img src={earth} alt="Earth" className="w-full" />
+          <div className="w-full lg:w-1/2 text-center p-2 plant-image">
+            <img src={earth} alt="Earth" className="w-full " />
           </div>
           <div className="w-full lg:w-1/2 text-xs md:p-2 rounded-2xl md:mt-6 text-justify">
-            <div className="flex items-start ">
+            <div className="flex items-start plant-text">
               <span className="flex-shrink-0 border-4 border-green-700 p-1 rounded-full">
                 <img
                   src={tree1}
                   alt="Banyan Tree"
-                  className="w-24 h-24 rounded-full object-cover"
+                  className="w-24 h-24 rounded-full object-cover plant-image"
                 />
               </span>
-              <span className="ps-3 ">
+              <span className="ps-3">
                 <div className="text-lg text-primary font-bold">
                   Banyan Tree
                 </div>
@@ -44,35 +84,34 @@ const PlantType = () => {
               </span>
             </div>
 
-            <div className="flex py-1 ms-0 sm:ms-20 items-start">
+            {/* Repeat similar blocks for other trees */}
+            <div className="flex py-1 ms-0 sm:ms-20 items-start plant-text">
               <span className="flex-shrink-0 border-4 border-green-700 p-1 rounded-full">
                 <img
                   src={tree1}
-                  alt="Banyan Tree"
-                  className="w-24 h-24 rounded-full object-cover"
+                  alt="Peepal Tree"
+                  className="w-24 h-24 rounded-full object-cover plant-image"
                 />
               </span>
-              <span className="ps-3 ">
-                <div className="text-lg text-primary font-bold">
-                  Peepal Tree
-                </div>
+              <span className="ps-3">
+                <div className="text-lg text-primary font-bold">Peepal Tree</div>
                 <div className="text-sm">
-                  Known for its massive size and extensive canopy, the Banyan
+                  Known for its massive size and extensive canopy, the Peepal
                   tree is a powerful oxygen producer, contributing significantly
                   to the environment.
                 </div>
               </span>
             </div>
 
-            <div className="flex py-1 ms-0 sm:ms-32 items-start ">
+            <div className="flex py-1 ms-0 sm:ms-32 items-start plant-text">
               <span className="flex-shrink-0 border-4 border-green-700 p-1 rounded-full">
                 <img
                   src={tree1}
-                  alt="Banyan Tree"
-                  className="w-24 h-24 rounded-full object-cover"
+                  alt="Neem Tree"
+                  className="w-24 h-24 rounded-full object-cover plant-image"
                 />
               </span>
-              <span className="ps-3 ">
+              <span className="ps-3">
                 <div className="text-lg text-primary font-bold">Neem Tree</div>
                 <div className="text-sm">
                   Neem is a fast-growing tree that releases a large amount of
@@ -82,17 +121,17 @@ const PlantType = () => {
               </span>
             </div>
 
-            <div className="flex py-1 ms-0 sm:ms-20 items-start">
+            <div className="flex py-1 ms-0 sm:ms-20 items-start plant-text">
               <span className="flex-shrink-0 border-4 border-green-700 p-1 rounded-full">
                 <img
                   src={tree1}
-                  alt="Banyan Tree"
-                  className="w-24 h-24 rounded-full object-cover"
+                  alt="Arjuna Tree"
+                  className="w-24 h-24 rounded-full object-cover plant-image"
                 />
               </span>
-              <span className="ps-3 ">
+              <span className="ps-3">
                 <div className="text-lg text-primary font-bold">
-                  Arjuna Tree{" "}
+                  Arjuna Tree
                 </div>
                 <div className="text-sm">
                   Arjuna is known for its high oxygen release, contributing to
@@ -103,17 +142,17 @@ const PlantType = () => {
               </span>
             </div>
 
-            <div className="flex py-1 items-start">
+            <div className="flex py-1 items-start plant-text">
               <span className="flex-shrink-0 border-4 border-green-700 p-1 rounded-full">
                 <img
                   src={tree1}
-                  alt="Banyan Tree"
-                  className="w-24 h-24 rounded-full object-cover"
+                  alt="Sandalwood Tree"
+                  className="w-24 h-24 rounded-full object-cover plant-image"
                 />
               </span>
-              <span className="ps-3 ">
+              <span className="ps-3">
                 <div className="text-lg text-primary font-bold">
-                  Sandalwood Tree{" "}
+                  Sandalwood Tree
                 </div>
                 <div className="text-sm">
                   Sandalwood trees are known for their oxygen-releasing
