@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0  border-gray-200 dark:border-gray-600">
+    <nav className="white-bg dark:bg-gray-900 fixed w-full z-20 top-0 start-0  border-gray-200 dark:border-gray-600">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4">
         {" "}
         {/* Added px-4 for padding */}
@@ -26,6 +26,13 @@ const Navbar = () => {
           >
             Donate
           </NavLink>
+          {/* <NavLink
+            to="/certificate"
+            type="button"
+            className="md:block text-white bg-second hover:bg-second-hover focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-9 mr-11 py-2 dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
+          >
+            Get Certified
+          </NavLink> */}
           <button
             onClick={toggleMenu}
             className="flex items-center  text-gray-500 rounded-lg focus:outline-none  ml-auto md:hidden" // Added ml-auto for alignment
