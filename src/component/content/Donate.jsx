@@ -17,8 +17,8 @@ const Register = () => {
 
   useGSAP(()=>{
     gsap.fromTo(
-    '.tabs',
-        { y: -50, opacity: 0 },
+    '.tabs,.heading-donate',
+        { y: -40, opacity: 0 },
         {
           y: 0,
           opacity: 1,
@@ -55,16 +55,16 @@ const Register = () => {
 
   return (
     <>
-      <div className="w-full mt-32 px-12">
+      <div className="w-full mt-32 px-4 md:px-16">
         <div className="flex justify-center">
-          <h2 className="heading01 font-bold mb-8 md:text-3xl">
+          <h2 className="heading01 font-bold mb-8 md:text-3xl heading-donate">
             {' '}
             Donate What Your ❤️ Want{' '}
           </h2>
 
           <img src={headlogo1} className="h-14 inline" alt="" />
         </div>
-        <div className="flex gap-4 mx-10 mt-6">
+        <div className="flex gap-4 md:mx-10 mt-6">
           <div className="w-1/3">
             <button
               className={`tabs w-full py-6 text-2xl rounded-lg font-semibold ${
