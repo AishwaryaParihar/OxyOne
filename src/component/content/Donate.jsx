@@ -11,6 +11,7 @@ import { LiaDonateSolid } from "react-icons/lia";
 import { PiIslandLight } from "react-icons/pi";
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import UserRecordForm from './DonateReusableForm';
 
 
 const Register = () => {
@@ -109,7 +110,7 @@ const Register = () => {
             <div className=" rounded-lg shadow-md">
              
               {/* Land donation form */}
-              <TreeDonate />
+              <UserRecordForm donationType="tree" />
             </div>
           )}
 
@@ -117,7 +118,7 @@ const Register = () => {
             <div className=" rounded-lg shadow-md">
 
               {/* Money donation form */}
-          <LandDonate/>
+              <UserRecordForm donationType="land" />
             </div>
           )}
         </div>

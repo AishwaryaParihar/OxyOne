@@ -1,52 +1,52 @@
-import React, { useEffect } from "react";
-import tree1 from "../../assets/banyan.webp";
-import arjuna from "../../assets/arjuna.webp";
-import neem from "../../assets/neem.jfif";
-import pipal from "../../assets/pipal.jfif";
-import sandlewood from "../../assets/sandlewood.jpg";
-import jamun from "../../assets/jamun.jpg";
-import bamboo from "../../assets/bamboo.webp";
-import earth from "../../assets/earth.png";
-import headlogo1 from "../../assets/flower-pot.png";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useEffect } from 'react';
+import tree1 from '../../assets/banyan.webp';
+import arjuna from '../../assets/arjuna.webp';
+import neem from '../../assets/neem.jfif';
+import pipal from '../../assets/pipal.jfif';
+import sandlewood from '../../assets/sandlewood.jpg';
+import jamun from '../../assets/jamun.jpg';
+import bamboo from '../../assets/bamboo.webp';
+import earth from '../../assets/earth.png';
+import headlogo1 from '../../assets/flower-pot.png';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const PlantType = () => {
   useEffect(() => {
     gsap.fromTo(
-      ".plant-image",
+      '.plant-image',
       { x: -100, opacity: 0 },
       {
         x: 0,
         opacity: 1,
         duration: 1,
-        ease: "power2.out",
+        ease: 'power2.out',
         stagger: 0.3,
         scrollTrigger: {
-          trigger: ".plant-image",
-          start: "top 80%",
-          end: "bottom 60%",
-          toggleActions: "play none none none",
+          trigger: '.plant-image',
+          start: 'top 80%',
+          end: 'bottom 60%',
+          toggleActions: 'play none none none',
         },
       }
     );
 
     gsap.fromTo(
-      ".plant-text",
+      '.plant-text',
       { y: 100, opacity: 0 },
       {
         y: 0,
         opacity: 1,
         duration: 1,
-        ease: "power2.out",
+        ease: 'power2.out',
         stagger: 0.3,
         scrollTrigger: {
-          trigger: ".plant-text",
-          start: "top 80%",
-          end: "bottom 60%",
-          toggleActions: "play none none reverse",
+          trigger: '.plant-text',
+          start: 'top 80%',
+          end: 'bottom 60%',
+          toggleActions: 'play none none reverse',
         },
       }
     );
@@ -54,16 +54,18 @@ const PlantType = () => {
 
   return (
     <div className="w-full px-4 lg:px-16 plant">
-      <div className="mt-10 lg:mt-20 md:p-4">
-        <div className="flex justify-center">
-          <div className="heading01">Nature's Oxygen Heroes</div>
-          <img src={headlogo1} className="h-14 inline" alt="" />
+      <div className="mt-10 lg:mt-20 md:p-4 text-center justify-center">
+        <div className="flex flex-col items-center text-center">
+          <div className="flex items-center">
+            <div className="heading01 mr-2">Nature's Oxygen Heroes</div>
+            <img src={headlogo1} className="h-14" alt="" />
+          </div>
+          <div className="subheading text-justify mt-2">
+            Discover the magnificent plants that contribute the most to our
+            environment by producing abundant oxygen, essential for life on
+            Earth.
+          </div>
         </div>
-        <div className="subheading text-justify">
-          Discover the magnificent plants that contribute the most to our
-          environment by producing abundant oxygen, essential for life on Earth.
-        </div>
-
         <div className="flex flex-col lg:flex-row py-1 mt-0 lg:mt-4 text-center justify-center items-center">
           <div className="w-full lg:w-1/2  p-2 plant-image ">
             <img src={earth} alt="Earth" className="w-full h-full" />
@@ -99,7 +101,9 @@ const PlantType = () => {
                 />
               </span>
               <span className="ps-3">
-                <div className="text-lg text-primary font-bold">Peepal Tree</div>
+                <div className="text-lg text-primary font-bold">
+                  Peepal Tree
+                </div>
                 <div className="text-sm">
                   Known for its massive size and extensive canopy, the Peepal
                   tree is a powerful oxygen producer, contributing significantly
@@ -116,9 +120,13 @@ const PlantType = () => {
                 />
               </span>
               <span className="ps-3">
-                <div className="text-lg text-primary font-bold">Bamboo Tree</div>
+                <div className="text-lg text-primary font-bold">
+                  Bamboo Tree
+                </div>
                 <div className="text-sm">
-                Bamboo is a fast-growing, sustainable resource that helps in reducing deforestation and absorbs more CO2 than other trees, making it great for combating climate change.
+                  Bamboo is a fast-growing, sustainable resource that helps in
+                  reducing deforestation and absorbs more CO2 than other trees,
+                  making it great for combating climate change.
                 </div>
               </span>
             </div>
@@ -170,11 +178,12 @@ const PlantType = () => {
                 />
               </span>
               <span className="ps-3">
-                <div className="text-lg text-primary font-bold">
-                  Jamun Tree
-                </div>
+                <div className="text-lg text-primary font-bold">Jamun Tree</div>
                 <div className="text-sm">
-                Jamun is rich in vitamins, antioxidants, and minerals. It is known to help manage blood sugar levels, making it beneficial for diabetics.Jamun helps in maintaining a healthy heart by controlling blood pressure and cholesterol levels.
+                  Jamun is rich in vitamins, antioxidants, and minerals. It is
+                  known to help manage blood sugar levels, making it beneficial
+                  for diabetics.Jamun helps in maintaining a healthy heart by
+                  controlling blood pressure and cholesterol levels.
                 </div>
               </span>
             </div>

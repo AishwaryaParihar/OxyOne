@@ -5,6 +5,10 @@ const SummaryApi = {
     url: `${backendDomain}/api/contact`,
     method: "post",
   },
+  postUserRecordDetails:{
+    url:`${backendDomain}/api/post-userRecord`,
+    method: "post",
+  },
 }
 
 export default SummaryApi;
